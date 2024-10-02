@@ -32,10 +32,8 @@
         ];
       });
 
-      // Convert the normalized points to a string
       var content = normalizedPoints.map((p) => p.join("% ") + "%").join(",\n");
 
-      // Function to download the content as a .txt file
       function downloadTxtFile(content) {
         const blob = new Blob([content], { type: "text/plain" });
         const link = document.createElement("a");
@@ -44,7 +42,6 @@
         link.click();
       }
 
-      // Attach download function to the button click
       document
         .getElementById("download-btn")
         .addEventListener("click", function () {
